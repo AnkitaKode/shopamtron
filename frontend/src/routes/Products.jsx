@@ -13,7 +13,7 @@ const getDummyProducts = () => [
     longDescription: "Say Goodbye to Buzzing Pests! Tired of mosquitoes and flying insects ruining your peace and quiet? Our Rechargeable Electric Mosquito Killer Lamp is the ultimate solution for protecting your family from pesky bites, without the use of harmful chemicals or sprays.",
     price: 999.00,
     compareAtPrice: 1999.00,
-    featuredImageUrl: "/src/assets/img1.jpg",
+    featuredImageUrl: "/img1.svg",
     isNew: true,
     shopifyProductId: "mosquito-lamp-uv"
   },
@@ -24,7 +24,7 @@ const getDummyProducts = () => [
     longDescription: "Experience superior audio quality with our premium wireless Bluetooth headphones. Featuring active noise cancellation, 30-hour battery life, and crystal-clear sound reproduction.",
     price: 2999.00,
     compareAtPrice: 4999.00,
-    featuredImageUrl: "/src/assets/img2.jpg",
+    featuredImageUrl: "/img2.svg",
     isNew: false,
     shopifyProductId: "wireless-headphones"
   },
@@ -35,7 +35,7 @@ const getDummyProducts = () => [
     longDescription: "Stay connected and track your health with our smart fitness tracker watch. Monitor your heart rate, count steps, track workouts, and receive notifications from your phone.",
     price: 1599.00,
     compareAtPrice: 2999.00,
-    featuredImageUrl: "/src/assets/img3.jpg",
+    featuredImageUrl: "/img3.svg",
     isNew: true,
     shopifyProductId: "fitness-tracker"
   },
@@ -46,7 +46,7 @@ const getDummyProducts = () => [
     longDescription: "Never run out of battery again with our high-capacity 20,000mAh power bank. Features fast charging technology, multiple USB ports, and a sleek aluminum design.",
     price: 1299.00,
     compareAtPrice: 2499.00,
-    featuredImageUrl: "/src/assets/img4.jpg",
+    featuredImageUrl: "/img4.svg",
     isNew: false,
     shopifyProductId: "power-bank"
   },
@@ -57,7 +57,7 @@ const getDummyProducts = () => [
     longDescription: "Crafted from premium genuine leather, this wallet combines style with security. Features RFID blocking technology, multiple card slots, and a slim design that fits comfortably in your pocket.",
     price: 899.00,
     compareAtPrice: 1599.00,
-    featuredImageUrl: "/src/assets/img5.jpg",
+    featuredImageUrl: "/img5.svg",
     isNew: true,
     shopifyProductId: "leather-wallet-rfid"
   },
@@ -68,7 +68,7 @@ const getDummyProducts = () => [
     longDescription: "Protect your home with our advanced 4K security camera. Features crystal-clear 4K resolution, night vision up to 30ft, motion detection alerts, and easy mobile app integration.",
     price: 4599.00,
     compareAtPrice: 6999.00,
-    featuredImageUrl: "/src/assets/img6.jpg",
+    featuredImageUrl: "/img6.svg",
     isNew: false,
     shopifyProductId: "security-camera-4k"
   },
@@ -79,7 +79,7 @@ const getDummyProducts = () => [
     longDescription: "Dominate your gaming sessions with our professional mechanical keyboard. Features Cherry MX Blue switches, customizable RGB lighting, programmable macro keys, and durable aluminum frame.",
     price: 3299.00,
     compareAtPrice: 5999.00,
-    featuredImageUrl: "/src/assets/img7.jpg",
+    featuredImageUrl: "/img7.svg",
     isNew: true,
     shopifyProductId: "gaming-keyboard-rgb"
   },
@@ -90,7 +90,7 @@ const getDummyProducts = () => [
     longDescription: "Experience premium audio with our true wireless earbuds. Features active noise cancellation, 8-hour battery life, premium drivers, and a comfortable, secure fit for all-day wear.",
     price: 2299.00,
     compareAtPrice: 3999.00,
-    featuredImageUrl: "/src/assets/img8.jpg",
+    featuredImageUrl: "/img8.svg",
     isNew: false,
     shopifyProductId: "wireless-earbuds-anc"
   }

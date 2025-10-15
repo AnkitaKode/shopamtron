@@ -47,7 +47,7 @@ export default function ProductCard({ product }) {
         <div className="relative overflow-hidden bg-gray-100">
           {/* Product Image */}
           <img
-            src={product.featuredImageUrl || '/src/assets/placeholder.jpg'}
+            src={product.featuredImageUrl || '/img1.svg'}
             alt={product.title}
             className="w-full h-64 object-cover transform transition-transform duration-500"
             style={{
@@ -55,7 +55,7 @@ export default function ProductCard({ product }) {
             }}
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = '/src/assets/placeholder.jpg';
+              e.target.src = '/img1.svg';
             }}
           />
 
