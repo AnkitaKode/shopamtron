@@ -197,7 +197,7 @@ export default function Products() {
           </div>
         )}
 
-        {error && (
+        {error && error.fallbackToDemo !== true && (
           <div className="container mx-auto px-6">
             <div className="text-center mb-12 bg-white/80 backdrop-blur-md rounded-3xl py-12 px-8 shadow-xl border-2 border-blue-200/50">
               <p className="text-red-600 font-semibold text-lg">⚠️ Error loading products</p>

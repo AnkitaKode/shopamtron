@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: shopamtron-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    port: 8080
+    healthCheckPath: /api
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      # Database URL will be provided by Render PostgreSQL service
+      - key: DATABASE_URL
+        fromService:
+          type: pserv
+          name: shopamtron-db
+          property: connectionString
+      - key: DB_USERNAME
+        fromService:
+          type: pserv
+          name: shopamtron-db
+          property: username
+      - key: DB_PASSWORD
+        fromService:
+          type: pserv
+          name: shopamtron-db
+          property: password
+
+  - type: pserv
+    name: shopamtron-db
+    env: postgres
+    databaseName: shopamtron
+    ipAllowList: []

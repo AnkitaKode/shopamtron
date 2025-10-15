@@ -1,0 +1,14 @@
+target/
+.idea/
+*.iml
+*.log
+*.tmp
+.DS_Store
+node_modules/
+.git/
+.gitignore
+README.md
+mvnw
+mvnw.cmd
+.env
+uploads/
