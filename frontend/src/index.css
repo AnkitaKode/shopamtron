@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+/* 🌌 Global Cosmic Theme */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(circle at top left, #0f172a, #020617 80%);
+  color: #e2e8f0; /* soft light text */
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 🌟 Moving Stars Background */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 100px 100px;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+body::before {
+  animation: stars-move 180s linear infinite;
+}
+
+body::after {
+  animation: stars-move 220s linear infinite reverse;
+  opacity: 0.25;
+}
+
+@keyframes stars-move {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-200px, -200px); }
+}
+
+/* ✨ Text & Glow */
+.text-glow {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4),
+               0 0 24px rgba(96, 165, 250, 0.3);
+}
+
+/* 🔮 Fade & Slide Animations */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.2s ease-out both;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out both;
+}
+
+/* 💫 Floating & Glow Effects */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3),
+                0 0 30px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6),
+                0 0 45px rgba(59, 130, 246, 0.4);
+  }
+}
+
+.glow-on-hover:hover {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* 🪩 Cards & UI Hover Effects */
+.card-hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
+  background: rgba(37, 99, 235, 0.1);
+}
+
+/* 🌈 Buttons */
+.btn {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #1d4ed8, #2563eb);
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+/* 🌌 Footer */
+.footer-dark {
+  background: linear-gradient(to top, #020617, #0f172a);
+  color: #cbd5e1;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-dark a {
+  color: #60a5fa;
+  transition: color 0.3s ease;
+}
+
+.footer-dark a:hover {
+  color: #93c5fd;
+  text-shadow: 0 0 10px rgba(147, 197, 253, 0.6);
+}
+
+/* 🌊 Floating UI Orbs (optional decoration) */
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-15px) scale(1.05); opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+
+/* 🌙 Dark Blue Vibrant Background */
+body {
+  background: radial-gradient(circle at top, #0a1931 0%, #0a1128 100%);
+  color: #e0e7ff; /* light blue-white text */
+  font-family: 'Poppins', system-ui, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 🌠 Star Particles */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 4s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+/* 🌈 Smooth fade + lift animations */
+.fade-in {
+  animation: fade-in 1.5s ease-out both;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hover-glow {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-glow:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* ✨ Button Styling */
+.btn {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
+}
+
+/* Headings and text */
+h1, h2, h3 {
+  color: #f1f5ff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
