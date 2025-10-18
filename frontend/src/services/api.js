@@ -2,7 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: process.env.NODE_ENV === 'production'
-    ? "https://your-backend-domain.com/api" // Replace with your deployed backend URL
+    ? "https://shopamtron.onrender.com/api" // Production backend URL
     : "http://localhost:8080/api", // Spring Boot backend for development
   headers: {
     "Content-Type": "application/json"
