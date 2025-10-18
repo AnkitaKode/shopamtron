@@ -3,7 +3,7 @@ import api from '../services/api';
 const addMosquitoLamp = async () => {
   try {
     // Fetch the image file
-    const response = await fetch('/img1.svg');
+    const response = await fetch('/img1.jpg');
     const blob = await response.blob();
     const file = new File([blob], 'img1.jpg', { type: 'image/jpeg' });
 
