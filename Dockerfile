@@ -8,13 +8,16 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y maven
 
 # Copy pom.xml first for better Docker layer caching
-COPY pom.xml .
+COPY backend/pom.xml ./backend/pom.xml
+
+# Set working directory to backend for Maven build
+WORKDIR /app/backend
 
 # Download dependencies (this layer will be cached if pom.xml doesn't change)
 RUN mvn dependency:go-offline -B
 
 # Copy source code
-COPY src ./src
+COPY backend/src ./src
 
 # Build the application
 RUN mvn clean package -DskipTests
@@ -23,7 +26,10 @@ RUN mvn clean package -DskipTests
 RUN mkdir -p uploads
 
 # Copy application properties and other resources
-COPY src/main/resources ./target/classes
+COPY backend/src/main/resources ./target/classes
+
+# Go back to app root
+WORKDIR /app
 
 # Expose the port the app runs on
 EXPOSE 8080
@@ -35,4 +41,4 @@ ENV SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
 ENV SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
 
 # Run the application
-CMD ["java", "-jar", "target/Shopamtron-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "backend/target/Shopamtron-0.0.1-SNAPSHOT.jar"]
